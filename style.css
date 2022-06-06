@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #232123;
+  color: white;
+  font-family: "Nothing You Could Do", cursive;
+}
+.container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+
+header {
+  border: 2px solid red;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid white;
+}
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+}
+
+.inp-btn {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  height: 4rem;
+  width: 8rem;
+  margin-top: 2rem;
+  background-color: rgb(189, 189, 189);
+  display: inline-block;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.input {
+  height: 6rem;
+  width: 13rem;
+  border: 2px solid white;
+  outline: 2px solid white;
+  outline-offset: 3px;
+  background-color: #232123;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  font-family: "Nothing You Could Do";
+}
+
+.info {
+  background-color: rgba(143, 142, 142, 0.205);
+  border: 5px solid white;
+  padding: 1rem;
+}
+
+.num-chance {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.winlose {
+  height: 20vh;
+  text-align: center;
+  font-size: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.chance {
+  margin-bottom: 2rem;
+}
