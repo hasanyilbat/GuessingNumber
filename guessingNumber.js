@@ -15,34 +15,41 @@ let hak = 5;
 
 btn.addEventListener("click", () => {
   console.log(rasgeleSayi);
-
   const tahmin = input.value;
-  console.log(input.value);
   hak -= 1;
   if (tahmin == rasgeleSayi) {
     chance.textContent = `Congratulations 🥳`;
     winlose.innerHTML = `<p> YOU WON </p> <p> The Number is: ${rasgeleSayi} `;
     winlose.style.background = "green";
+    btn.style.display = "none";
   } else {
     chance.textContent = `Be Careful You have ${hak} chance`;
 
     if (tahmin < rasgeleSayi) {
       min = tahmin;
       minmax.textContent = `Between ${tahmin} and ${max}`;
-      console.log(`${tahmin} ve ${max} arası`);
-
-      console.log("ARTTIR ⬆️");
     } else {
-      console.log("AZALT ⬇️");
       max = tahmin;
       minmax.textContent = `Between ${min} and ${tahmin}`;
-      console.log(`${min} ve ${tahmin}`);
     }
   }
 
   if (hak === 0 && tahmin != rasgeleSayi) {
     winlose.innerHTML = `<p> YOU LOST </p> <p> The Number is: ${rasgeleSayi} `;
     winlose.style.background = "red";
+    btn.style.display = "none";
   }
   input.value = "";
+});
+
+input.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    btn.onclick();
+  }
+});
+
+window.addEventListener("load", (event) => {
+  reBtn.onclick = function () {
+    location.reload(true);
+  };
 });
