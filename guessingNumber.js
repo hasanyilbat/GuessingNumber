@@ -12,6 +12,7 @@ const reBtn = document.querySelector(".re-btn");
 let min = 0;
 let max = 100;
 let hak = 5;
+reBtn.style.display = "none";
 
 btn.addEventListener("click", () => {
   console.log(rasgeleSayi);
@@ -22,6 +23,8 @@ btn.addEventListener("click", () => {
     winlose.innerHTML = `<p> YOU WON </p> <p> The Number is: ${rasgeleSayi} `;
     winlose.style.background = "green";
     btn.style.display = "none";
+    reBtn.style.display = "block";
+    input.disabled = "true";
   } else {
     chance.textContent = `Be Careful You have ${hak} chance`;
 
@@ -38,13 +41,15 @@ btn.addEventListener("click", () => {
     winlose.innerHTML = `<p> YOU LOST </p> <p> The Number is: ${rasgeleSayi} `;
     winlose.style.background = "red";
     btn.style.display = "none";
+    reBtn.style.display = "block";
+    input.disabled = "true";
   }
   input.value = "";
 });
 
 input.addEventListener("keydown", (e) => {
   if (e.keyCode === 13) {
-    btn.onclick();
+    btn.click();
   }
 });
 
